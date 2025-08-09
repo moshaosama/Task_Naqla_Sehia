@@ -8,7 +8,7 @@ const FilterationInput = () => {
   return (
     <>
       <form className={cn("relative", Content)}>
-        <div className="absolute top-7 left-[30.6pc]">
+        <div className="absolute top-7 left-[25.7pc]">
           <Search color="#a3a3a3" />
         </div>
         <input

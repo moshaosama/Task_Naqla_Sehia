@@ -1,69 +1,29 @@
-# React + TypeScript + Vite
+# Mohamed Osama - Naqla Sehia Frontend Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+Responsive product listing page built with React and Redux Toolkit.  
+Fetches products from [Fake Store API](https://fakestoreapi.com/), supports Arabic & English languages with `react-i18next`, and provides light/dark theme toggle.  
+Styled with Tailwind CSS for full responsiveness on desktop & mobile.  
 
-Currently, two official plugins are available:
+## Features
+- API integration using Redux Toolkit's `createAsyncThunk`
+- State management with Redux Toolkit slices
+- Internationalization (English & Arabic) via `react-i18next`
+- Light and dark mode theme toggle with icon buttons
+- Reusable `ProductCard` component showing product image, title, category & price
+- Responsive grid layout for products
+- Error & loading state handling
+- Animations using Tailwind CSS (e.g. fade-in, bounce effects)
+- Icons from `react-icons` (FontAwesome used for theme toggle icons)
+- Clean, modular folder structure and well-commented code
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+*(Optional: Add live demo link here)*
 
-## Expanding the ESLint configuration
+## Installation & Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+git clone https://github.com/mohamedosama-naqlasehia.git
+cd mohamedosama-naqlasehia
+npm install
+npm start

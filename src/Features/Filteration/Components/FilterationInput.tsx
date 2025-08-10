@@ -14,7 +14,7 @@ const FilterationInput = () => {
         onChange={handleSubmit(handleSetFilteration)}
         className={cn("relative", Content)}
       >
-        <div className="absolute top-7 left-[25.7pc]">
+        <div className="absolute top-7 left-[25.7pc] max-sm:left-[2.6pc] max-2xl:left-[14.7pc] max-xl:left-[7.6pc]">
           <Search color="#a3a3a3" />
         </div>
         <input

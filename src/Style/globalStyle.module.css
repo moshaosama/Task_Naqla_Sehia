@@ -5,3 +5,30 @@
 .Content {
   padding: 1pc 25pc;
 }
+
+@media (max-width: 1500px) and (min-width: 1201px) {
+  .Container {
+    margin: 0 5pc;
+  }
+  .Content {
+    padding: 1pc 14pc;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 801px) {
+  .Container {
+    margin: 0 2pc;
+  }
+  .Content {
+    padding: 1pc 7pc;
+  }
+}
+
+@media (max-width: 800px) {
+  .Container {
+    margin: 0 2pc;
+  }
+  .Content {
+    padding: 1pc 2pc;
+  }
+}

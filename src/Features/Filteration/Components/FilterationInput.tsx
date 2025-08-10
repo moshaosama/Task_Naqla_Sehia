@@ -3,11 +3,13 @@ import { cn } from "../../../lib/utils";
 import { Content } from "../../../Style/GlobalStyle";
 import { useThemeContext } from "../../../Context/useTheme";
 import { useFilteraionContext } from "../../../Context/useFilteration";
+import useChangeLanguages from "../../../Hooks/useChangeLanguages";
 
 const FilterationInput = () => {
   const { theme } = useThemeContext();
   const { handleSetFilteration, handleSubmit, register } =
     useFilteraionContext();
+  const { t } = useChangeLanguages();
   return (
     <>
       <form
@@ -19,7 +21,7 @@ const FilterationInput = () => {
         </div>
         <input
           type="text"
-          placeholder="Search for products"
+          placeholder={t("placeHolderInput")}
           className={cn(
             "  rounded-xl focus:outline-0 font-bold w-full py-3 px-10",
             theme == "light" ? "bg-[#d1d1d1]" : "bg-black border"

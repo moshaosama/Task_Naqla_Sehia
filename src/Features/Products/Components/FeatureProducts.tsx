@@ -24,9 +24,9 @@ const FeatureProducts = () => {
           <h1 className="text-3xl font-bold">Feature Products</h1>
         </div>
 
-        <div className="grid grid-cols-4 gap-4 my-10">
+        <div className="grid grid-cols-4 max-sm:grid-cols-2 gap-4 my-10">
           {isLoading ? (
-            <div className="py-[15.9pc] px-[30pc]">
+            <div className="py-[15.9pc] max-sm:py-5 max-sm:px-5 px-[30pc]">
               <ClockLoader
                 color={theme === "light" ? "black" : "white"}
                 size={100}

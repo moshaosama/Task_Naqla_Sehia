@@ -16,7 +16,7 @@ const Navbar = () => {
             <h1 className="text-xl font-bold">{t("BrandName")}</h1>
           </div>
 
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-10 max-sm:gap-2">
             <div onClick={toggleTheme} className="cursor-pointer">
               {theme === "light" ? <Moon /> : <Sun />}
             </div>

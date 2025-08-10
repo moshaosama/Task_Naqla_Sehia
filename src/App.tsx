@@ -1,3 +1,4 @@
+import { FilterationProvider } from "./Context/useFilteration";
 import { ThemeProvider } from "./Context/useTheme";
 import FilterationInput from "./Features/Filteration/Components/FilterationInput";
 import FeatureProducts from "./Features/Products/Components/FeatureProducts";
@@ -11,11 +12,13 @@ const FeatureProductsTheme = ThemeFactory(FeatureProducts);
 function App() {
   return (
     <>
-      <ThemeProvider>
-        <NavbarTheme />
-        <FilterationInputTheme />
-        <FeatureProductsTheme />
-      </ThemeProvider>
+      <FilterationProvider>
+        <ThemeProvider>
+          <NavbarTheme />
+          <FilterationInputTheme />
+          <FeatureProductsTheme />
+        </ThemeProvider>
+      </FilterationProvider>
     </>
   );
 }

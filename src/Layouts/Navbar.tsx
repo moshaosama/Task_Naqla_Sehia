@@ -5,7 +5,7 @@ import { cn } from "../lib/utils";
 import useChangeLanguages from "../Hooks/useChangeLanguages";
 const Navbar = () => {
   const { toggleTheme, theme } = useThemeContext();
-  const { ChangeLanuage, t } = useChangeLanguages();
+  const { ChangeLanuage, t, Lang } = useChangeLanguages();
 
   return (
     <>
@@ -22,18 +22,22 @@ const Navbar = () => {
             </div>
 
             <div>
-              <button
-                onClick={() => ChangeLanuage("en")}
-                className="border py-1 px-5 rounded-2xl hover:bg-[gray] transition-all duration-700 cursor-pointer"
-              >
-                en
-              </button>
-              <button
-                onClick={() => ChangeLanuage("ar")}
-                className="border py-1 px-5 hover:bg-[gray] transition-all duration-700 rounded-2xl cursor-pointer"
-              >
-                ar
-              </button>
+              {Lang === "ar" && (
+                <button
+                  onClick={() => ChangeLanuage("en")}
+                  className="border py-1 px-5 rounded-2xl hover:bg-[gray] transition-all duration-700 cursor-pointer"
+                >
+                  en
+                </button>
+              )}
+              {Lang === "en" && (
+                <button
+                  onClick={() => ChangeLanuage("ar")}
+                  className="border py-1 px-5 hover:bg-[gray] transition-all duration-700 rounded-2xl cursor-pointer"
+                >
+                  ar
+                </button>
+              )}
             </div>
 
             <div>

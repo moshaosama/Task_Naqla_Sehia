@@ -1,4 +1,5 @@
 import { useThemeContext } from "../../../Context/useTheme";
+import useChangeLanguages from "../../../Hooks/useChangeLanguages";
 import { Content } from "../../../Style/GlobalStyle";
 import useGetProducts from "../Hooks/useGetProducts";
 import { ClockLoader } from "react-spinners";
@@ -6,12 +7,13 @@ import { ClockLoader } from "react-spinners";
 const FeatureProducts = () => {
   const { filteredProducts, isLoading } = useGetProducts();
   const { theme } = useThemeContext();
+  const { t } = useChangeLanguages();
 
   if (filteredProducts?.length === 0 && !isLoading) {
     return (
       <>
         <div className="flex justify-center">
-          <h1 className="text-4xl font-bold text-red-700">No products</h1>
+          <h1 className="text-4xl font-bold text-red-700">{t("NotFound")}</h1>
         </div>
       </>
     );
@@ -21,7 +23,7 @@ const FeatureProducts = () => {
     <>
       <div className={Content}>
         <div>
-          <h1 className="text-3xl font-bold">Feature Products</h1>
+          <h1 className="text-3xl font-bold">{t("Header")}</h1>
         </div>
 
         <div className="grid grid-cols-4 max-sm:grid-cols-2 gap-4 my-10">

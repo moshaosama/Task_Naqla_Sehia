@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}

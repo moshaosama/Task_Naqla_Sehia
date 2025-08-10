@@ -2,12 +2,18 @@ import { Search } from "lucide-react";
 import { cn } from "../../../lib/utils";
 import { Content } from "../../../Style/GlobalStyle";
 import { useThemeContext } from "../../../Context/useTheme";
+import { useFilteraionContext } from "../../../Context/useFilteration";
 
 const FilterationInput = () => {
   const { theme } = useThemeContext();
+  const { handleSetFilteration, handleSubmit, register } =
+    useFilteraionContext();
   return (
     <>
-      <form className={cn("relative", Content)}>
+      <form
+        onChange={handleSubmit(handleSetFilteration)}
+        className={cn("relative", Content)}
+      >
         <div className="absolute top-7 left-[25.7pc]">
           <Search color="#a3a3a3" />
         </div>
@@ -18,6 +24,7 @@ const FilterationInput = () => {
             "  rounded-xl focus:outline-0 font-bold w-full py-3 px-10",
             theme == "light" ? "bg-[#d1d1d1]" : "bg-black border"
           )}
+          {...register("Category")}
         />
       </form>
     </>

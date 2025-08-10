@@ -18,10 +18,12 @@ interface initialStateType {
   product: ProductData[];
   error: string;
   loading: boolean;
+  category: string;
 }
 
 const initialState: initialStateType = {
   product: [],
+  category: "all",
   error: "",
   loading: false,
 };
@@ -29,8 +31,12 @@ const initialState: initialStateType = {
 const ProductSlice = createSlice({
   initialState,
   name: "Products",
-  reducers: {},
-  extraReducers: (builder) => {
+  reducers: {
+    setCategory: (state, action) => {
+      state.category = action.payload;
+    },
+  },
+  extraReducers: async (builder) => {
     builder
       .addCase(FetchProducts.pending, (state) => {
         state.loading = true;
@@ -47,4 +53,5 @@ const ProductSlice = createSlice({
   },
 });
 
-export default ProductSlice.reducer; // ✅ Export reducer
+export default ProductSlice.reducer;
+export const { setCategory } = ProductSlice.actions;

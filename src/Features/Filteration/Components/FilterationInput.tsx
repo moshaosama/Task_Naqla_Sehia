@@ -21,6 +21,7 @@ const FilterationInput = () => {
         </div>
         <input
           type="text"
+          id="Filteration"
           placeholder={t("placeHolderInput")}
           className={cn(
             "  rounded-xl focus:outline-0 font-bold w-full py-3 px-10",

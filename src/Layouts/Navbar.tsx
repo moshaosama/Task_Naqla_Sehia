@@ -17,13 +17,14 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-10 max-sm:gap-2">
-            <div onClick={toggleTheme} className="cursor-pointer">
+            <div onClick={toggleTheme} id="theme" className="cursor-pointer">
               {theme === "light" ? <Moon /> : <Sun />}
             </div>
 
             <div>
               {Lang === "ar" && (
                 <button
+                  id="Language"
                   onClick={() => ChangeLanuage("en")}
                   className="border py-1 px-5 rounded-2xl hover:bg-[gray] transition-all duration-700 cursor-pointer"
                 >
@@ -32,6 +33,7 @@ const Navbar = () => {
               )}
               {Lang === "en" && (
                 <button
+                  id="Language"
                   onClick={() => ChangeLanuage("ar")}
                   className="border py-1 px-5 hover:bg-[gray] transition-all duration-700 rounded-2xl cursor-pointer"
                 >

@@ -25,7 +25,7 @@ Styled with Tailwind CSS for full responsiveness on desktop & mobile, with smoot
 - **Clean, Modular Folder Structure** and well-commented code
 
 ## Demo
-*(Optional: Add live demo link here)*
+[Live Demo](https://task-naqla-sehia.vercel.app/),
 
 ## Installation & Setup
 ```bash
